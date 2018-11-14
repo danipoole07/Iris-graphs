@@ -14,7 +14,9 @@ library("tidyverse")
 
 iris_graph <-ggplot(iris, aes(x =Petal.Length, y= Petal.Width))+
   geom_point(aes(color = Species)) +
-  theme_classic()
+  theme_classic() +
+  facet_wrap(~Species) +
+  labs(x = "Length (mm)", y = "Width (mm)")
 
 iris_graph
 ```
