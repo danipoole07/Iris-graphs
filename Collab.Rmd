@@ -1,0 +1,21 @@
+---
+title: "Danielle-Iris-Graphs"
+author: "Danielle Poole"
+date: "11/13/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library("tidyverse")
+
+iris_graph <-ggplot(iris, aes(x =Petal.Length, y= Petal.Width))+
+  geom_point(aes(color = Species)) +
+  theme_classic()
+
+iris_graph
+```
+
